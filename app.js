@@ -4,6 +4,7 @@
 
 var http       = require('http');
 var url        = require('url');
+var coffee     = require('coffee-script/register')
 var express    = require('express');
 var config     = require('config');
 var socketIo   = require('socket.io');
@@ -30,7 +31,7 @@ var server = http.createServer(app);
 
 app.configure(function(){
   app.use(app.router);
-  // the following middlewares are only necessary for the mounted 'dashboard' app, 
+  // the following middlewares are only necessary for the mounted 'dashboard' app,
   // but express needs it on the parent app (?) and it therefore pollutes the api
   app.use(express.bodyParser());
   app.use(express.methodOverride());
