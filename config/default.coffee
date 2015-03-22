@@ -1,5 +1,3 @@
-console.log(process.env.MONGODB_URL)
-
 module.exports =
   url: process.env.BASE_URL
 
