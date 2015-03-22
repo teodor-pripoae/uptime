@@ -1,7 +1,10 @@
+console.log(process.env.MONGODB_URL)
+
 module.exports =
-  url:
-    mongodb:
-      connectionString: process.env.MONGODB_URL
+  url: process.env.BASE_URL
+
+  mongodb:
+    connectionString: process.env.MONGODB_URL
   monitor:
     name:                   'origin'
     apiUrl:                 process.env.API_URL # must be accessible without a proxy
